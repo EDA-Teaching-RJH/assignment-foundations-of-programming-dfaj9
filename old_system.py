@@ -36,8 +36,10 @@ def run_system_monolith():
             new_name = input("Name: ")
             new_rank = input("Rank: ")
             new_div = input("Division: ")
+
+            r.append(new_rank)
             
-           
+            
             n.append(new_name)
             print("Crew member added.")
             
