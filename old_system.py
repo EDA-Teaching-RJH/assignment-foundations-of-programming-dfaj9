@@ -38,6 +38,8 @@ def run_system_monolith():
             new_div = input("Division: ")
 
             r.append(new_rank)
+            d.append(new_div)
+
             
             
             n.append(new_name)
