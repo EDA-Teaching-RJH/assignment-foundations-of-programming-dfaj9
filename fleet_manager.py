@@ -4,3 +4,8 @@ def init_database():
     d = ["Command", "Command", "Operations", "Security"]
     ids = ["1", "2", "3", "4"]
     return n, r, d, ids
+    
+def main():
+    n, r, d, ids = init_database()
+    print(n, r, d, ids)
+main()
