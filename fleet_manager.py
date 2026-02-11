@@ -1,9 +1,9 @@
 def init_database():
-    n = ["Picard", "Riker", "Data", "Worf"]
-    r = ["Captain", "Commander", "Lt. Commander", "Lieutenant"]
-    d = ["Command", "Command", "Operations", "Security"]
+    names = ["Picard", "Riker", "Data", "Worf"]
+    ranks = ["Captain", "Commander", "Lt. Commander", "Lieutenant"]
+    divs = ["Command", "Command", "Operations", "Security"]
     ids = ["1", "2", "3", "4"]
-    return n, r, d, ids
+    return names, ranks, divs, ids
     
 
 def display_menu():
@@ -23,8 +23,13 @@ def display_menu():
     option = input("Choose an option: ")
     return option
 def main():
-    n, r, d, ids = init_database()
-    print(n, r, d, ids)
+    names, ranks, divs, ids = init_database()
+    print(names, ranks, divs, ids)
     option = display_menu()
+
+
+
+
+
 main()
 
