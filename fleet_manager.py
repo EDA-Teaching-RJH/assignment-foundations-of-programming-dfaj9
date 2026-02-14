@@ -22,11 +22,35 @@ def display_menu():
 
     option = input("Choose an option: ")
     return option
+
+def add_member(names, ranks, divs, ids):
+    new_member = input("Enter the new members name: ")
+    new_rank = input("Choose your rank: ")
+    new_divs = input("Choose your division: ")
+    new_ids = input("Choose your ID: ")
+
+    names.append(new_member)
+    ranks.append(new_rank)
+    divs.append(new_divs)
+    ids.append(new_ids)
+    return names, ranks, divs, ids
+
+    if add_ids in ids:
+       print("This ID cannot be used, please choose a different one.")
+       return
+
+    
+
+
 def main():
     names, ranks, divs, ids = init_database()
     print(names, ranks, divs, ids)
     option = display_menu()
-
+    if option == "1":
+        add_member(names, ranks, divs, ids)
+        print("New member has been added! ")
+    if option == "9":
+        print("You have successfully logged out! ")
 
 
 
