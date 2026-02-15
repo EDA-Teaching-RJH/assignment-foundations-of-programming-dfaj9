@@ -127,7 +127,14 @@ def calculate_payroll(ranks):
     return total
 
 
-
+def count_officers(ranks):
+    count = 0 
+    for i in range(len(ranks)):
+        if ranks[i] == "Captain":
+            count+=1
+        elif ranks[i] == "Commander":
+            count +=1
+    return count
     
                    
             
@@ -167,6 +174,10 @@ def main():
         calculate_payroll(ranks)
         total = calculate_payroll(ranks)
         print("This is the total payroll:", total)
+    elif option == "8":
+        count_officers(ranks)
+        officers = count_officers(ranks)
+        print("These are the number of officers: ", officers)
 
 
     
