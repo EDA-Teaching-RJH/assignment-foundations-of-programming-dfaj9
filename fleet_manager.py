@@ -72,6 +72,19 @@ def update_rank(names, ranks, ids):
     ranks[update] = rank_update
     print("Your rank has successfully been updated! ")
 
+def display_roster(names, ranks, divs, ids):
+     print("\n--- Roster ---")
+     print("name", end= "           ")
+     print("rank", end="            ")
+     print("division", end= "           ")
+     print("ID")
+
+     for i in range(len(names)):
+         print(names[i], end= "         ")
+         print(ranks[i], end= "         ")
+         print(divs[i], end= "         ")
+         print(ids[i])
+
 
 
     
@@ -96,6 +109,8 @@ def main():
         remove_member(names, ranks, divs, ids)
     elif option == "3":
         update_rank(names, ranks, ids)
+    elif option == "4":
+        display_roster(names, ranks, divs, ids)
 
     
 
