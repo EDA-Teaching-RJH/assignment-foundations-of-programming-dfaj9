@@ -94,7 +94,24 @@ def search_crew(names, ranks, divs, ids):
             print("Division", divs[i])
             print("ID", ids[i])
         
-            
+def filter_by_division(names, divs):
+    user_division = input("Enter the division: Command, Operations, Sciences ")  
+    if user_division == "Command":
+        for i in range(len(names)):
+            if divs[i] == "Command":
+                print(names[i])
+            elif user_division == "Operations":
+                for i in range(len(names)):
+                    if divs[i] == "Operations":
+                        print(names[i])
+                    elif user_division == "Sciences":
+                        for i in range(len(names)):
+                            if divs[i] == "Sciences":
+                                print(names[i])
+                            else:
+                                print("This division does not exist! ")
+
+                   
             
 
 
@@ -126,6 +143,9 @@ def main():
         display_roster(names, ranks, divs, ids)
     elif option == "5":
         search_crew(names, ranks, divs, ids)
+    elif option == "6":
+        filter_by_division(names, divs)
+
 
     
 
