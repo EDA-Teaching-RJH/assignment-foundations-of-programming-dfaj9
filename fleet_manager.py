@@ -49,6 +49,25 @@ def add_member(names, ranks, divs, ids):
        print("This ID cannot be used, please choose a different one.")
        return
 
+def remove_member(names, ranks, divs, ids):
+    user_id = input("Enter the ID that you would like to remove? ")
+
+    if user_id not in ids:
+        print("This id does not exist! ")
+        return
+    rem = ids.index(user_id)
+    names.pop(rem)
+    ranks.pop(rem)
+    divs.pop(rem)
+    ids.pop(rem)
+    print("This member has sucessfully been removed! ")
+    
+    
+    
+        
+
+
+
     
 
 
@@ -60,6 +79,9 @@ def main():
         add_member(names, ranks, divs, ids)
     if option == "9":
         print("You have successfully logged out! ")
+    
+    if option == "2":
+        remove_member(names, ranks, divs, ids)
 
 
 
