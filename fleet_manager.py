@@ -1,6 +1,6 @@
 def init_database():
     names = ["Picard", "Riker", "Data", "Worf", "Spock"]
-    ranks = ["Captain", "Commander", "Lt. Commander", "Lieutenant", "Cadet"]
+    ranks = ["Captain", "Commander", "Lt. Commander", "Lieutenant", "Ensign"]
     divs = ["Command", "Command", "Operations", "Security", "Sciences"]
     ids = ["1", "2", "3", "4", "5"]
     return names, ranks, divs, ids
@@ -111,6 +111,24 @@ def filter_by_division(names, divs):
                             else:
                                 print("This division does not exist! ")
 
+def calculate_payroll(ranks):
+    total = 0
+    for i in range(len(ranks)):
+        if ranks[i] == "Captain":
+            total+= 1000
+        elif ranks[i] == "Commander":
+            total+= 300
+        elif ranks[i] == "Lt. Commander":
+            total+= 700
+        elif ranks[i] == "Lieutenant":
+            total+= 800
+        elif ranks[i] == "Ensign":
+            total+= 200
+    return total
+
+
+
+    
                    
             
 
@@ -145,6 +163,10 @@ def main():
         search_crew(names, ranks, divs, ids)
     elif option == "6":
         filter_by_division(names, divs)
+    elif option == "7":
+        calculate_payroll(ranks)
+        total = calculate_payroll(ranks)
+        print("This is the total payroll:", total)
 
 
     
