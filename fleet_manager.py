@@ -62,6 +62,18 @@ def remove_member(names, ranks, divs, ids):
     ids.pop(rem)
     print("This member has sucessfully been removed! ")
     
+def update_rank(names, ranks, ids):
+    member_id = input("Enter the id of the rank that you would like to update: ")
+    if member_id not in ids:
+        print("This user id does not exist! ")
+        return
+    update = ids.index(member_id)
+    rank_update = input("Please enter your new rank: ")
+    ranks[update] = rank_update
+    print("Your rank has successfully been updated! ")
+
+
+
     
     
         
@@ -77,11 +89,15 @@ def main():
     option = display_menu()
     if option == "1":
         add_member(names, ranks, divs, ids)
-    if option == "9":
+    elif option == "9":
         print("You have successfully logged out! ")
     
-    if option == "2":
+    elif option == "2":
         remove_member(names, ranks, divs, ids)
+    elif option == "3":
+        update_rank(names, ranks, ids)
+
+    
 
 
 
