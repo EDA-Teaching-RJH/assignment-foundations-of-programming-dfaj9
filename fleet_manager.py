@@ -85,6 +85,19 @@ def display_roster(names, ranks, divs, ids):
          print(divs[i], end= "         ")
          print(ids[i])
 
+def search_crew(names, ranks, divs, ids):
+    search_term = input("Enter the name that you would like to search: ")
+    for i in range(len(names)):
+        if search_term in names[i]:
+            print("Name", names[i])
+            print("Rank", ranks[i])
+            print("Division", divs[i])
+            print("ID", ids[i])
+        
+            
+            
+
+
 
 
     
@@ -111,6 +124,8 @@ def main():
         update_rank(names, ranks, ids)
     elif option == "4":
         display_roster(names, ranks, divs, ids)
+    elif option == "5":
+        search_crew(names, ranks, divs, ids)
 
     
 
