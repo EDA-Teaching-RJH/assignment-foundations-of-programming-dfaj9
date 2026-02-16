@@ -30,9 +30,12 @@ def add_member(names, ranks, divs, ids):
     new_rank = input("Choose your rank: ")
     new_divs = input("Choose your division: ")
     new_ids = input("Choose your ID: ")
+    if new_ids in ids:
+        print("This ID is unavailable, as it is currently in use. Please choose a different one: ")
+        return
 
 
-    validate_ranks = ["Captain", "Commander", "Lt. Commander", "Lieutenant", "Cadet"]
+    validate_ranks = ["Captain", "Commander", "Lt. Commander", "Lieutenant", "Ensign"]
     if new_rank in validate_ranks:
         names.append(new_member)
         ranks.append(new_rank)
@@ -45,9 +48,7 @@ def add_member(names, ranks, divs, ids):
         
     
 
-    if new_ids in ids:
-       print("This ID cannot be used, please choose a different one.")
-       return
+   
 
 def remove_member(names, ranks, divs, ids):
     user_id = input("Enter the ID that you would like to remove? ")
